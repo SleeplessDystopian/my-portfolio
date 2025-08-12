@@ -1,0 +1,150 @@
+/* style.css — Mad Men inspired theme */
+
+:root {
+  --primary: #c41e3a; /* bold red */
+  --secondary: #222; /* deep charcoal */
+  --accent: #f4d06f; /* muted gold */
+  --bg: #fdfaf6; /* off-white */
+  --text: #111; /* near-black */
+  --muted: #666; /* grey text */
+  font-size: 16px;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  background-color: var(--bg);
+  color: var(--text);
+  line-height: 1.6;
+}
+
+a {
+  color: var(--primary);
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+a:hover {
+  color: var(--secondary);
+}
+
+header {
+  background-color: var(--secondary);
+  color: white;
+  padding: 1rem 0;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+header .brand a {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: white;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  gap: 1rem;
+}
+
+nav a {
+  color: white;
+  padding: 0.5rem 0.75rem;
+  border-radius: 4px;
+  transition: background-color 0.3s ease;
+}
+
+nav a:hover {
+  background-color: var(--primary);
+}
+
+.hero {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 3rem 0;
+  border-bottom: 4px solid var(--primary);
+}
+
+.hero h1 {
+  font-size: 2.5rem;
+  font-weight: bold;
+  color: var(--secondary);
+}
+
+.hero p {
+  color: var(--muted);
+  max-width: 600px;
+}
+
+section {
+  padding: 3rem 0;
+}
+
+h2 {
+  font-size: 2rem;
+  border-bottom: 2px solid var(--primary);
+  display: inline-block;
+  margin-bottom: 1.5rem;
+}
+
+.card {
+  background-color: white;
+  border: 1px solid #ddd;
+  padding: 1.5rem;
+  border-radius: 4px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+  transition: transform 0.2s ease;
+}
+
+.card:hover {
+  transform: translateY(-4px);
+}
+
+.grid {
+  display: grid;
+  gap: 1.5rem;
+}
+
+.grid.cols-3 {
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+}
+
+form input,
+form textarea,
+form button {
+  width: 100%;
+  padding: 0.75rem;
+  margin-top: 0.5rem;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 1rem;
+}
+
+form button {
+  background-color: var(--primary);
+  color: white;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+form button:hover {
+  background-color: var(--secondary);
+}
+
+footer {
+  background-color: var(--secondary);
+  color: white;
+  text-align: center;
+  padding: 1rem;
+  margin-top: 3rem;
+  font-size: 0.9rem;
+}
